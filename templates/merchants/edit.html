@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update a Merchant</h2>
+
+<form action="/merchants/{{ merchant.id }}" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ merchant.name }}">
+    </div>
+    <div>
+        <label for="merchant-type">Merchant Type:</label>
+        <select name="merchant_type_id" id="merchant-type">
+            {% for merchant_type in merchant_types %}
+            <option value="{{ merchant_type.id }}" {% if merchant_type.id == merchant.merchant_type.id %} selected {% endif %}>
+                {{ merchant_type.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
