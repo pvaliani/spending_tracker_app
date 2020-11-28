@@ -62,6 +62,6 @@ def update_zombie(id):
 
 # DELETE
 @merchants_blueprint.route("/merchants/<id>/delete", methods=["POST"])
-def delete_zombie(id):
+def delete_merchant(id):
     merchant_repository.delete(id)
     return redirect("/merchants")
