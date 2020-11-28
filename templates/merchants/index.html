@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Merchants</h2>
+
+{% for merchant in merchants %}
+
+<section>
+    <h3>{{ merchant.name }}</h3>
+    <p>{{ merchant.zombie_type.name }}</p>
+    <a href="/merchants/{{ merchant.id }}/edit">Edit</a>
+    <form action="/merchants/{{ merchant.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/merchants/{{ merchant.id }}">Details</a>
+</section>
+
+{% endfor %}
+{% endblock %}
