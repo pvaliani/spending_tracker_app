@@ -1,7 +1,12 @@
+from flask import Flask, render_template
+
+# CONTROLLER BLUEPRINT IMPORTS HERE
 
 
+app = Flask(__name__)
 
 
+# BLUEPRINT REGISTRATION HERE 
 
 
 
