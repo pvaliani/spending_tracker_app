@@ -1,10 +1,10 @@
 <h2>{{ merchant.name }}</h2>
 <p>Type: {{ merchant.merchant_type.name }}</p>
 
-<!-- ALTER THIS TO REMOVE VICTIMS once makes sense -->
+<!-- ALTER THIS TO REMOVE VICTIMS once makes sense -- changed to victim to value from name here and in repository for merchant  -->
 <h3>Victims</h3>
 <ul>
     {% for victim in victims %}
-    <li>{{ victim.name }}</li>
+    <li>{{ victim.value }}</li>
     {% endfor %}
 </ul>

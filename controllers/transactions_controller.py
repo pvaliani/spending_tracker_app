@@ -27,7 +27,7 @@ def new_transaction():
 
 # CREATE
 @transactions_blueprint.route("/transactions", methods=["POST"])
-def create_biting():
+def create_transaction():
     amount_id = request.form["amount_id"]
     merchant_id = request.form["merchant_id"]
     amount = amount_repository.select(amount_id)
@@ -39,7 +39,7 @@ def create_biting():
 
 # EDIT
 @transactions_blueprint.route("/transactions/<id>/edit")
-def edit_biting(id):
+def edit_transaction(id):
     transaction = transaction_repository.select(id)
     amounts = amount_repository.select_all()
     merchants = merchant_repository.select_all()
@@ -48,7 +48,7 @@ def edit_biting(id):
 
 # UPDATE
 @transactions_blueprint.route("/transactions/<id>", methods=["POST"])
-def update_biting(id):
+def update_transaction(id):
     amount_id = request.form["amount_id"]
     merchant_id = request.form["merchant_id"]
     amount = amount_repository.select(amount_id)
@@ -60,6 +60,6 @@ def update_biting(id):
 
 # DELETE
 @transactions_blueprint.route("/transactions/<id>/delete", methods=["POST"])
-def delete_biting(id):
+def delete_transaction(id):
     transaction_repository.delete(id)
     return redirect("/transactions")

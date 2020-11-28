@@ -55,6 +55,6 @@ def select_victims_of_zombie(id):
     values = [id]
     results = run_sql(sql, values)
     for result in results:
-        amount = Amount(result["name"])
+        amount = Amount(result["value"])
         victims.append(amount)
     return victims

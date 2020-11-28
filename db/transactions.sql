@@ -26,3 +26,6 @@ CREATE TABLE transactions (
     merchant_id SERIAL REFERENCES merchants(id),
     amount_id SERIAL REFERENCES amounts(id)
 );
+
+
+-- possibly add code to delete on cascade

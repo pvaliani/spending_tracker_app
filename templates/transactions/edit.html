@@ -6,7 +6,7 @@
 <form action="/transactions/{{ transaction.id }}" method="POST">
     <div>
         <label for="amount">Amount:</label>
-        <select name="human_id" id="amount">
+        <select name="amount_id" id="amount">
             {% for amount in amounts %}
             <option value="{{ amount.id }}" {% if amount.id == transaction.amount.id %} selected {% endif %}>
                 <!-- changed amount.name to amount.value due to global variable changes -->
