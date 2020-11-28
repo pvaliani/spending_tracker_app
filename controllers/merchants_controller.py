@@ -13,7 +13,7 @@ def merchants():
     return render_template("merchants/index.html", merchants=merchants)
     
 
-# - change from VICTIMS lines 20-24
+# - ****CHANGE from VICTIMS lines 20-24***************
 
 # SHOW
 @merchants_blueprint.route("/merchants/<id>")
@@ -32,7 +32,7 @@ def new_merchant():
 
 # CREATE
 @merchants_blueprint.route("/merchants", methods=["POST"])
-def create_zombie():
+def create_merchant():
     name = request.form["name"]
     merchant_type_id = request.form["merchant_type_id"]
     merchant_type = merchant_type_repository.select(merchant_type_id)
@@ -43,7 +43,7 @@ def create_zombie():
 
 # EDIT
 @merchants_blueprint.route("/merchants/<id>/edit")
-def edit_zombie(id):
+def edit_merchant(id):
     merchant = merchant_repository.select(id)
     merchant_types = merchant_type_repository.select_all()
     return render_template('merchants/edit.html', merchant=merchant, merchant_types=merchant_types)
@@ -51,7 +51,7 @@ def edit_zombie(id):
 
 # UPDATE
 @merchants_blueprint.route("/merchants/<id>", methods=["POST"])
-def update_zombie(id):
+def update_merchant(id):
     name = request.form["name"]
     merchant_type_id = request.form["merchant_type_id"]
     merchant_type = merchant_type_repository.select(merchant_type_id)
