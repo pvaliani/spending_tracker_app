@@ -29,14 +29,14 @@ def create_amount():
 
 # EDIT
 @amounts_blueprint.route("/amounts/<id>/edit")
-def edit_human(id):
+def edit_amount(id):
     amount = amount_repository.select(id)
     return render_template('amounts/edit.html', amount=amount)
 
 
 # UPDATE
 @amounts_blueprint.route("/amounts/<id>", methods=["POST"])
-def update_human(id):
+def update_amount(id):
     value = request.form["value"]
     amount = Amount(value, id)
     amount_repository.update(amount)
@@ -45,6 +45,6 @@ def update_human(id):
 
 # DELETE
 @amounts_blueprint.route("/amounts/<id>/delete", methods=["POST"])
-def delete_human(id):
+def delete_amount(id):
     amount_repository.delete(id)
     return redirect("/amounts")

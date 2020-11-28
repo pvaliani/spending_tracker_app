@@ -1,5 +1,7 @@
 import unittest
 
+from models.amount import Amount
+
 
 # IMPORT all tests from tests folder i.e tests.merchant_test import TestMerchant
 
