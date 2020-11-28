@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Transactions</h2>
+
+{% for transaction in transactions %}
+
+<section>
+    <!-- breakthrough line of code for my paying app - also changed amount.value from human.name-->
+    <p>{{ transaction.merchant.name }} bit {{ transaction.amount.value }} {{ transaction.merchant.merchant_type.name }} </p>
+    <a href="/transactions/{{ transaction.id }}/edit">Edit</a>
+    <form action="/transactions/{{ transaction.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</section>
+
+{% endfor %}
+{% endblock %}
