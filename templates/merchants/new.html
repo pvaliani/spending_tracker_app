@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add a New Merchant</h2>
+
+<form action="/merchants" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="merchant-type">Merchant Type:</label>
+        <select name="merchant_type_id" id="merchant-type">
+            {% for merchant_type in merchant_types %}
+            <option value="{{ merchant_type.id }}">
+                {{ merchant_type.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
