@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update an Amount</h2>
+
+<form action="/humans/{{ amount.id }}" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <!-- this was input type = text before -->
+        <input type="number" id="value" name="value" value="{{ amount.value }}">
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
