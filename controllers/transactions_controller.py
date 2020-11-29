@@ -14,7 +14,9 @@ def transactions():
     transactions = transaction_repository.select_all()
     # possible breakthrough code
     merchant_types = merchant_type_repository.select_all()
-    return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types)
+    # locates the total sum from the db table and allows it to show in the view. Doesn't work properly though
+    total = amount_repository.sum()
+    return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types, total=total)
 
 
 # NEW

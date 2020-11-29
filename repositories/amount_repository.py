@@ -60,3 +60,8 @@ def update(amount):
     sql = "UPDATE amounts SET value = %s WHERE id = %s"
     values = [amount.value, amount.id]
     run_sql(sql, values)
+
+# - This method the sum of the amount values in the table to give total spend. DOESN'T WORK AS POST REQUEST DOESN'T DELETE FROM DB!
+def sum():
+    sql = "SELECT SUM (value) FROM amounts"
+    return run_sql(sql)[0][0]

@@ -22,7 +22,7 @@ CREATE TABLE merchant_types (
 CREATE TABLE merchants (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    merchant_type_id INT REFERENCES merchant_types(id)
+    merchant_type_id INT REFERENCES merchant_types(id) ON DELETE CASCADE
 );
 
 -- Creates an empty table called "Transactions" to store transactions. Creates a column called merchant_id which represents the primary key id of merchant_id and a column called amount_id which represents the primary key id of amount_id. Therefore, linking transactions to amounts and merchants as in the class defintion of Transaction
@@ -30,8 +30,8 @@ CREATE TABLE merchants (
 
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
-    merchant_id SERIAL REFERENCES merchants(id),
-    amount_id SERIAL REFERENCES amounts(id)
+    merchant_id SERIAL REFERENCES merchants(id) ON DELETE CASCADE,
+    amount_id SERIAL REFERENCES amounts(id) ON DELETE CASCADE
 );
 
 
