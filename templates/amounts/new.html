@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Amount</h2>
+<!-- Input type for the amount is a float in order to store currency -->
+
+<h2>Add your spend</h2>
 
 <form action="/amounts" method="POST">
     <div>
         <label for="value">Name:</label>
-        <input type="number" id="value" name="value">
+        <input type="float" id="value" name="value">
         <input type="submit">
     </div>
 </form>

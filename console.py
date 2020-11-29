@@ -24,7 +24,7 @@ merchant_type_repository.delete_all()
 amount_1 = Amount(30)
 amount_repository.save(amount_1)
 
-amount_2 = Amount(50)
+amount_2 = Amount(50.31)
 amount_repository.save(amount_2)
 
 amount_3 = Amount(100)

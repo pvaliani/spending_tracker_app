@@ -2,9 +2,9 @@
 <p>Type: {{ merchant.merchant_type.name }}</p>
 
 <!-- ALTER THIS TO REMOVE VICTIMS once makes sense -- changed to victim to value from name here and in repository for merchant  -->
-<h3>Victims</h3>
+<h3>Recent spend</h3>
 <ul>
-    {% for victim in victims %}
-    <li>{{ victim.value }}</li>
+    {% for amount in recent_amounts %}
+    <li>£{{ amount.value }}</li>
     {% endfor %}
 </ul>
