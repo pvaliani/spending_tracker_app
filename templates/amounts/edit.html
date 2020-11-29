@@ -6,7 +6,7 @@
 <form action="/amounts/{{ amount.id }}" method="POST">
     <div>
         <label for="name">Value: £</label>
-        <!-- this was input type = text before -->
+        <!-- Define the input type as a float to match the database -->
         <input type="float" id="value" name="value" value="{{ amount.value }}">
         <input type="submit">
     </div>

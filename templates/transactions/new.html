@@ -9,7 +9,6 @@
         <select name="amount_id" id="amount">
             {% for amount in amounts %}
             <option value="{{ amount.id }}">
-                <!-- changed amount.value instead of human.name -->
                 {{ amount.value }}
             </option>
             {% endfor %}
@@ -20,7 +19,7 @@
         <select name="merchant_id" id="merchant">
             {% for merchant in merchants %}
             <option value="{{ merchant.id }}">
-                <!-- this piece of code shows the type of merchant in dropdown menu -->
+                <!-- Show merchant name and associated spending category in dropdown menu -->
                 {{ merchant.name }} - {{ merchant.merchant_type.name }}
             </option>
             {% endfor %}
