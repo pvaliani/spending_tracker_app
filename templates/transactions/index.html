@@ -9,8 +9,6 @@
     <!-- Transaction summary statement - could add further information here or place into a table -->
     <p>You spent £{{ transaction.amount.value }} at {{ transaction.merchant.name }} on {{ transaction.merchant.merchant_type.name }} </p>
     
-
-
     
     <a href="/transactions/{{ transaction.id }}/edit">Edit</a>
     <form action="/transactions/{{ transaction.id }}/delete" method="POST">

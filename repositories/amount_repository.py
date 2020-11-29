@@ -3,7 +3,7 @@ from models.amount import Amount
 
 # - Save a new amount value into amounts table
 # - SQL statement to input into table
-# - Set the value attribute of amount to a list 
+# - Input the value attribute of amount object to a list 
 # - run_sql takes a list and returns a list of dictionaries
 # - The id of the amount is then the very first position of the results list of dict and it's dict key is id, dict value is the id associated with ['id']
 

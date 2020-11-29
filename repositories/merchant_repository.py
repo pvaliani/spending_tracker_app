@@ -48,7 +48,7 @@ def update(merchant):
     values = [merchant.name, merchant.merchant_type.id, merchant.id]
     run_sql(sql, values)
 
-# CHANGE VICTIMS OF ZOMBIE TO ANOTHER NAME AND CROSS REFERENCE OTHER FILES AND VICTIMS VARIABLE - 
+
 def select_recent_spends(id):
     recent_amounts = []
     sql = "SELECT amounts.* FROM amounts INNER JOIN transactions ON transactions.amount_id = amounts.id WHERE transactions.merchant_id = %s"

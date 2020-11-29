@@ -36,3 +36,11 @@ CREATE TABLE transactions (
 
 
 -- Possibly add code to delete on cascade
+
+-- format to access database tables below:
+
+-- psql -U username -d mydatabase -c 'SELECT * FROM mytable'
+
+-- psql -U user -d transactions -c 'SELECT SUM (value) FROM amounts'   - sums all amounts
+
+
