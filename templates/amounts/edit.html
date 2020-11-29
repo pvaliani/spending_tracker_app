@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update an Amount</h2>
+<h2>Update your amount spent</h2>
 
 <form action="/amounts/{{ amount.id }}" method="POST">
     <div>
-        <label for="name">Name:</label>
+        <label for="name">Value: £</label>
         <!-- this was input type = text before -->
         <input type="float" id="value" name="value" value="{{ amount.value }}">
         <input type="submit">

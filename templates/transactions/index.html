@@ -8,6 +8,10 @@
 <section>
     <!-- breakthrough line of code for my paying app - also changed amount.value from human.name-->
     <p>You spent £{{ transaction.amount.value }} at {{ transaction.merchant.name }} on {{ transaction.merchant.merchant_type.name }} </p>
+    
+
+
+    
     <a href="/transactions/{{ transaction.id }}/edit">Edit</a>
     <form action="/transactions/{{ transaction.id }}/delete" method="POST">
         <input type="submit" value="Delete">

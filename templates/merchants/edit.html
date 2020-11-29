@@ -5,11 +5,11 @@
 
 <form action="/merchants/{{ merchant.id }}" method="POST">
     <div>
-        <label for="name">Name:</label>
+        <label for="name">Merchant Name:</label>
         <input type="text" id="name" name="name" value="{{ merchant.name }}">
     </div>
     <div>
-        <label for="merchant-type">Merchant Type:</label>
+        <label for="merchant-type">Purchase Category:</label>
         <select name="merchant_type_id" id="merchant-type">
             {% for merchant_type in merchant_types %}
             <option value="{{ merchant_type.id }}" {% if merchant_type.id == merchant.merchant_type.id %} selected {% endif %}>

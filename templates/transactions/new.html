@@ -5,7 +5,7 @@
 
 <form action="/transactions" method="POST">
     <div>
-        <label for="amount">Amount:</label>
+        <label for="amount">Value: £</label>
         <select name="amount_id" id="amount">
             {% for amount in amounts %}
             <option value="{{ amount.id }}">
@@ -16,7 +16,7 @@
         </select>
     </div>
     <div>
-        <label for="merchant">Merchant:</label>
+        <label for="merchant">Store & Category</label>
         <select name="merchant_id" id="merchant">
             {% for merchant in merchants %}
             <option value="{{ merchant.id }}">

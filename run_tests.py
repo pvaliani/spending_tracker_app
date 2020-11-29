@@ -1,5 +1,6 @@
-import unittest
+# - Run tests across all project classes to check functionality is correct
 
+import unittest
 
 from tests.amount_test import TestAmount
 from tests.merchant_type_test import TestMerchantType

@@ -1,3 +1,5 @@
+# - Import de-bugging tools, models and repositories
+
 import pdb
 
 from models.transaction import Transaction
@@ -12,22 +14,23 @@ import repositories.merchant_repository as merchant_repository
 from models.merchant_type import MerchantType
 import repositories.merchant_type_repository as merchant_type_repository
 
-# Import classes and repositories here ---------------
+
+# - Clear all tables in the project database
 
 transaction_repository.delete_all()
 amount_repository.delete_all()
 merchant_repository.delete_all()
 merchant_type_repository.delete_all()
 
-# - Data to seed database
+# - Initial data which seeds to database
 
-amount_1 = Amount(30)
+amount_1 = Amount(33.40)
 amount_repository.save(amount_1)
 
 amount_2 = Amount(50.31)
 amount_repository.save(amount_2)
 
-amount_3 = Amount(100)
+amount_3 = Amount(100.50)
 amount_repository.save(amount_3)
 
 amount_4 = Amount(1500)
@@ -60,4 +63,6 @@ transaction_repository.save(transaction_3)
 transaction_4 = Transaction(amount_4, merchant_2)
 transaction_repository.save(transaction_4)
 
-pdb.set_trace()
+# - Uncomment the below line to run the de-bugger when implementing and testing new functionality
+
+# pdb.set_trace()
