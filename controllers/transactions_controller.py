@@ -1,5 +1,6 @@
 from flask import Blueprint, Flask, redirect, render_template, request
 
+
 from models.transaction import Transaction
 import repositories.transaction_repository as transaction_repository
 import repositories.amount_repository as amount_repository
@@ -14,7 +15,7 @@ def transactions():
     transactions = transaction_repository.select_all()
     # possible breakthrough code
     merchant_types = merchant_type_repository.select_all()
-    # locates the total sum from the db table and allows it to show in the view. Doesn't work properly though
+    # locates the total sum from the db table and allows it to show in the view. Doesn't work properly though - DELETE
     total = amount_repository.sum()
     return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types, total=total)
 
