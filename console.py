@@ -14,6 +14,8 @@ import repositories.merchant_repository as merchant_repository
 from models.merchant_type import MerchantType
 import repositories.merchant_type_repository as merchant_type_repository
 
+from models.user_budget import UserBudget
+
 
 # - Clear all tables in the project database
 

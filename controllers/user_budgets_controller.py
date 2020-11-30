@@ -5,10 +5,11 @@ from models.user_budget import UserBudget
 user_budgets_blueprint = Blueprint("user_budgets", __name__)
 
 
-# INDEX
+# INDEX - returns a users budget and initialises as 0
 @user_budgets_blueprint.route("/userbudgets")
 def user_budgets():
-    return render_template("user_budgets/index.html")
+    user_budget = UserBudget(value=0)
+    return render_template("user_budgets/index.html", user_budget=user_budget )
 
 
 # NEW
@@ -19,30 +20,29 @@ def new_user_budget():
 
 # CREATE
 @user_budgets_blueprint.route("/userbudgets", methods=["POST"])
-def create_merchant_type():
+def create_new_user_budget():
     value = request.form["value"]
     new_user_budget = UserBudget(value)
-    merchant_type_repository.save(new_user_budget)
     return redirect("/userbudgets")
 
 
 # EDIT
 @user_budgets_blueprint.route("/userbudgets/edit")
-def edit_merchant_type():
-    user_budget = merchant_type_repository.select()
+def edit_user_budget():
+    #select sttement
     return render_template('user_budgets/edit.html', user_budget=user_budget)
 
 
 # UPDATE
-@user_budgets_blueprint.route("/userbudgets/<>", methods=["POST"])
-def update_merchant():
+@user_budgets_blueprint.route("/userbudgets", methods=["POST"])
+def update_user_budget():
     value = request.form["value"]
     user_budget = UserBudget(value)
-    merchant_type_repository.update(user_budget)
+    # update statement here??
 
 
 # DELETE
 @user_budgets_blueprint.route("/userbudgets/delete", methods=["POST"])
-def delete_merchant():
-    merchant_type_repository.delete()
+def delete_user_budget():
+    # delete from here
     return redirect("/userbudgets")
