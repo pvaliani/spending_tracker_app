@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS amounts;
 DROP TABLE IF EXISTS merchants;
 DROP TABLE IF EXISTS merchant_types;
 
--- Creates an empty table called "amounts" to store values of floating point type which represent user inputted transaction amounts. Assigns a column called id as the primary key
+-- Creates an empty table called "amounts" to store values of floating point type which represent user inputted transaction amounts. Assigns a column called id as the primary key - don't need the amounts tbale as we are just inputting a value into transactions - doesn't need to track them so don't need a view.
 
 CREATE TABLE amounts (
     id SERIAL PRIMARY KEY,
@@ -33,6 +33,10 @@ CREATE TABLE transactions (
     merchant_id SERIAL REFERENCES merchants(id) ON DELETE CASCADE,
     amount_id SERIAL REFERENCES amounts(id) ON DELETE CASCADE
 );
+
+-- delete amount_id and replace with the amount as an integer
+
+
 
 
 -- Possibly add code to delete on cascade
