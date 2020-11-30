@@ -25,6 +25,7 @@ def create_new_user_budget():
     new_user_budget = UserBudget(value)
     # value.append(new_user_budget)
     return redirect("/userbudgets")
+    # return render_template("/user_budgets/index.html", new_user_budget = new_user_budget.value )
 
 
 # EDIT
