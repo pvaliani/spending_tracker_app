@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update Your Budget</h2>
+
+<form action="/userbudgets" method="POST">
+    <div>
+        <label for="value">New Budget Value:</label>
+        <input type="float" id="value" name="value" value="{{ user_budget.value }}">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}

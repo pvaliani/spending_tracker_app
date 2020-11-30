@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add a New User Budget</h2>
+
+<form action="/userbudgets" method="POST">
+    <div>
+        <label for="value">Budget Value:</label>
+        <input type="float" id="value" name="value">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
