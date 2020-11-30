@@ -23,6 +23,7 @@ def new_user_budget():
 def create_new_user_budget():
     value = request.form["value"]
     new_user_budget = UserBudget(value)
+    # value.append(new_user_budget)
     return redirect("/userbudgets")
 
 
@@ -41,8 +42,8 @@ def update_user_budget():
     # update statement here??
 
 
-# DELETE
-@user_budgets_blueprint.route("/userbudgets/delete", methods=["POST"])
-def delete_user_budget():
-    # delete from here
-    return redirect("/userbudgets")
+# # DELETE
+# @user_budgets_blueprint.route("/userbudgets/delete", methods=["POST"])
+# def delete_user_budget():
+#     # delete from here
+#     return redirect("/userbudgets")
