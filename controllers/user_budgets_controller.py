@@ -12,8 +12,6 @@ user_budget = UserBudget(value=0)
 def user_budgets():
     return render_template("user_budgets/index.html", new_user_budget=user_budget)
 
-# ---- LOOK WITH INSTRUCTOR - CHANGED TO NEW_USER_BUDGET FROM USER_BUDGET --**************************
-
 # NEW
 @user_budgets_blueprint.route("/userbudgets/new")
 def new_user_budget():
@@ -25,11 +23,7 @@ def new_user_budget():
 def create_new_user_budget():
     value = request.form["value"]
     user_budget.value = value
-    # value.append(new_user_budget)
-    # return redirect("/userbudgets")
     return render_template("/user_budgets/index.html", new_user_budget = user_budget )
-
-# -- LOOK AT WITH INSTRUCTOR ************* --------------------
 
 
 # EDIT

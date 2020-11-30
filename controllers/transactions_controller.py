@@ -31,11 +31,13 @@ def new_transaction():
 # CREATE
 @transactions_blueprint.route("/transactions", methods=["POST"])
 def create_transaction():
+    # take amount information form to create amount object - amount =  request.form["value"] - new_amount = Amount(value)
     amount_id = request.form["amount_id"]
     merchant_id = request.form["merchant_id"]
     amount = amount_repository.select(amount_id)
     merchant = merchant_repository.select(merchant_id)
     new_transaction = Transaction(amount, merchant)
+    # amount_repository.save(new_amount)
     transaction_repository.save(new_transaction)
     return redirect("/transactions")
 

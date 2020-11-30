@@ -10,6 +10,14 @@ CREATE TABLE amounts (
     value FLOAT
 );
 
+CREATE TABLE user_budgets (
+
+    value FLOAT
+
+);
+
+-- Select one with users/budget or select ALL 
+
 -- Creates an empty table called "merchant_types" to store names which represent merchant tags i.e "groceries". Assigns a column called id as the primary key
 
 CREATE TABLE merchant_types (
