@@ -2,6 +2,8 @@ DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS amounts;
 DROP TABLE IF EXISTS merchants;
 DROP TABLE IF EXISTS merchant_types;
+DROP TABLE IF EXISTS user_budgets;
+
 
 -- Creates an empty table called "amounts" to store values of floating point type which represent user inputted transaction amounts. Assigns a column called id as the primary key - don't need the amounts tbale as we are just inputting a value into transactions - doesn't need to track them so don't need a view.
 
@@ -11,9 +13,7 @@ CREATE TABLE amounts (
 );
 
 CREATE TABLE user_budgets (
-
     value FLOAT
-
 );
 
 -- Select one with users/budget or select ALL 

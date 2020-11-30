@@ -9,7 +9,7 @@ import repositories.merchant_repository as merchant_repository
 
 
 def save(user_budget):
-    sql = "INSERT INTO user_budgets (value) VALUES (%s)"
+    sql = "INSERT INTO user_budgets (value) VALUES (%s) RETURNING value"
     values = [user_budget.value]
     results = run_sql(sql, values)
     value = results[0]['value']

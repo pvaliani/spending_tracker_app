@@ -15,6 +15,7 @@ from models.merchant_type import MerchantType
 import repositories.merchant_type_repository as merchant_type_repository
 
 from models.user_budget import UserBudget
+import repositories.user_budget_repository as user_budget_repository
 
 
 # - Clear all tables in the project database
@@ -23,6 +24,7 @@ transaction_repository.delete_all()
 amount_repository.delete_all()
 merchant_repository.delete_all()
 merchant_type_repository.delete_all()
+user_budget_repository.delete_all()
 
 # - Initial data which seeds to database
 
@@ -64,6 +66,9 @@ transaction_repository.save(transaction_3)
 
 transaction_4 = Transaction(amount_4, merchant_2)
 transaction_repository.save(transaction_4)
+
+user_budget = UserBudget(666)
+user_budget_repository.save(user_budget)
 
 # - Uncomment the below line to run the de-bugger when implementing and testing new functionality
 
