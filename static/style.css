@@ -53,13 +53,50 @@
 
     font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
     padding-top: 200px;
 
 
 }
 
 /* ----- HOME PAGE CSS ----------- */
+
+
+/* ----- ABOUT PAGE CSS ---------------- */
+
+.about-list {
+
+    list-style-type: none;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 15px;
+
+
+
+}
+
+.about-logo {
+
+
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 150px;
+
+
+}
+
+
+
+
+/* ----- ABOUT PAGE CSS ---------------- */
+
+
+
+
+
 
 /* ----- BUDGET VIEW CSS --------- */
 
