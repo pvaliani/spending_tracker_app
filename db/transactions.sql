@@ -13,6 +13,7 @@ CREATE TABLE amounts (
 );
 
 CREATE TABLE user_budgets (
+    id SERIAL PRIMARY KEY,
     value FLOAT
 );
 

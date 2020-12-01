@@ -3,14 +3,17 @@
 
 <h2>Update Your Budget</h2>
 
+<!-- WORKING -->
+
 <form action="/userbudgets" method="POST">
     <div>
         <label for="value">New Budget Value:</label>
-        <input type="float" id="value" name="value" value="{{ user_budget.value }}">
+        <input type="number" id="value" name="value" value="{{ user_budget.value }}">
     </div>
     <div>
         <input type="submit">
     </div>
 </form>
+
 
 {% endblock %}

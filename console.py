@@ -67,7 +67,7 @@ transaction_repository.save(transaction_3)
 transaction_4 = Transaction(amount_4, merchant_2)
 transaction_repository.save(transaction_4)
 
-user_budget = UserBudget(666)
+user_budget = UserBudget(0)
 user_budget_repository.save(user_budget)
 
 # - Uncomment the below line to run the de-bugger when implementing and testing new functionality

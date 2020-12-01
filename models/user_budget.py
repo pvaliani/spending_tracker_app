@@ -2,5 +2,6 @@
 
 class UserBudget:
 
-    def __init__(self, value):
+    def __init__(self, value, id=None):
         self.value = value
+        self.id = id

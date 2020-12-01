@@ -6,6 +6,8 @@
 <form action="/transactions" method="POST">
     <div>
         <label for="amount">Value: £</label>
+        <!-- change to input from select -->
+        
         <select name="amount_id" id="amount">
             {% for amount in amounts %}
             <option value="{{ amount.id }}">
