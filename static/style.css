@@ -329,6 +329,30 @@
 
 
 
+#transactions-edit-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.transactions-edit {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+
+
+
+
 /* ------- TRANSACTIONS CSS ---------- */
 
 
@@ -372,6 +396,26 @@
 }
 
 .amounts-add {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+#amounts-edit-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.amounts-edit {
 
     font-family: Helvetica, sans-serif;
     font-size: 20px;

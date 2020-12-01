@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update a Transaction</h2>
+<h2 id="transactions-edit-header">Update a Transaction</h2>
 
 <form action="/transactions/{{ transaction.id }}" method="POST">
-    <div>
+    <div class="transactions-edit">
         <label for="amount">Amount:</label>
         <select name="amount_id" id="amount">
             {% for amount in amounts %}
@@ -14,7 +14,7 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="transactions-edit">
         <label for="merchant">Merchant:</label>
         <select name="merchant_id" id="merchant">
             {% for merchant in merchants %}
@@ -24,7 +24,7 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="transactions-edit">
         <input type="submit">
     </div>
 </form>

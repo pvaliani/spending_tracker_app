@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update your amount spent</h2>
+<h2 id="amounts-edit-header">Update Seed.</h2>
 
 <form action="/amounts/{{ amount.id }}" method="POST">
-    <div>
-        <label for="name">Value: £</label>
+    <div class="amounts-edit">
+        <label for="name"></label>
         <!-- Define the input type as a float to match the database -->
         <input type="float" id="value" name="value" value="{{ amount.value }}">
         <input type="submit">
