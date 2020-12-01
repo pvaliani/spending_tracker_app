@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Merchant Types</h2>
+<h2 id="tag-header">Merchant Tags.</h2>
 
 {% for merchant_type in merchant_types %}
 
-<section>
+<section class ="tag-main-view">
     <p>{{ merchant_type.name }}</p>
     <a href="/merchanttypes/{{ merchant_type.id }}/edit">Edit</a>
     <form action="/merchanttypes/{{ merchant_type.id }}/delete" method="POST">

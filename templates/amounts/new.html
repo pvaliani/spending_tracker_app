@@ -3,11 +3,11 @@
 
 <!-- Input type for the amount is a float in order to store currency -->
 
-<h2>Add your amount spent</h2>
+<h2 id="amounts-add-header">Add seeds.</h2>
 
 <form action="/amounts" method="POST">
-    <div>
-        <label for="value">Value: £</label>
+    <div class="amounts-add">
+        <label for="value"></label>
         <!-- Define the input type as a float to match the database -->
         <input type="float" id="value" name="value">
         <input type="submit">

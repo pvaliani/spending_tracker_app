@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Transaction</h2>
+<h2 id="transactions-add-header">Add a New Transaction</h2>
 
 <form action="/transactions" method="POST">
-    <div>
-        <label for="amount">Value: £</label>
+    <div class="transactions-add">
+        <label for="amount">£</label>
         <input type="number" name="amount" step=0.01>
     </div>
-    <div>
+    <div class="transactions-add">
         <label for="merchant">Store & Category</label>
         <select name="merchant_id" id="merchant">
             {% for merchant in merchants %}
@@ -19,7 +19,7 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="transactions-add">
         <input type="submit">
     </div>
 </form>

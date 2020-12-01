@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Merchant Type</h2>
+<h2 id="tag-add-header">Add a tag.</h2>
 
 <form action="/merchanttypes" method="POST">
-    <div>
-        <label for="name">Name:</label>
+    <div class="tag-add">
+        <label for="name"></label>
         <input type="text" id="name" name="name">
     </div>
-    <div>
+    <div class="tag-add">
         <input type="submit">
     </div>
 </form>

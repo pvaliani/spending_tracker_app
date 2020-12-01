@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Merchants</h2>
+<h2 id="store-view-header">Stores.</h2>
 
 {% for merchant in merchants %}
 
-<section>
+<section class="store-view">
     <h3>{{ merchant.name }}</h3>
     <p>{{ merchant.merchant_type.name }}</p>
     <a href="/merchants/{{ merchant.id }}/edit">Edit</a>

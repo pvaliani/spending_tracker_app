@@ -1,3 +1,5 @@
+/* ----- HOME PAGE CSS -------- */
+
 #main-header {
 
     font-family: Helvetica, sans-serif;
@@ -56,6 +58,10 @@
 
 }
 
+/* ----- HOME PAGE CSS ----------- */
+
+/* ----- BUDGET VIEW CSS --------- */
+
 
 .current-budget {
 
@@ -89,3 +95,223 @@
 
 
 }
+
+/* ------ BUDGET VIEW CSS------------ */
+
+/* ----- MERCHANT TAGS CSS ------------- */
+.tag-main-view {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+#tag-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+.tag-add {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+
+
+#tag-add-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+/* -------------MERCHANT TAGS CSS--------------- */
+
+
+
+/* ------ MERCHANT/STORES CSS ------- */
+
+#store-view-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+.store-view {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+#add-store-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+
+.store-add {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+
+
+}
+
+
+
+
+/* ------ MERCHANT/STORES CSS ------- */
+
+
+/* ------- TRANSACTIONS CSS ---------- */
+
+#transactions-view-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+
+
+}
+
+
+
+.transactions-view {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+
+#transaction-summary {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+
+#transactions-add-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.transactions-add {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+
+/* ------- TRANSACTIONS CSS ---------- */
+
+
+
+
+
+/* ------- AMOUNTS/SEEDS CSS ---------- */
+
+#amounts-view-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+
+
+}
+
+
+
+.amounts-view {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
+
+#amounts-add-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.amounts-add {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+
+
+
+
+
+/* ------- AMOUNTS/SEEDS CSS ---------- */

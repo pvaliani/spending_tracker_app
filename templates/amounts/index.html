@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>All Amounts</h2>
+<h2 id="amounts-view-header">Frequently used seeds.</h2>
 
 {% for amount in amounts %}
 
-<section>
+<section class="amounts-view">
     <p>£{{ amount.value }}</p>
     <a href="/amounts/{{ amount.id }}/edit">Edit</a>
     <form action="/amounts/{{ amount.id }}/delete" method="POST">
         <input type="submit" value="Delete">
-    </form>
+</form>
 </section>
 
 {% endfor %}
