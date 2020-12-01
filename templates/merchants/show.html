@@ -4,15 +4,13 @@
 <h2 id="store-details-header">{{ merchant.name }}</h2>
 
 <div class="store-show-details">
-<p>Type: {{ merchant.merchant_type.name }}</p>
-
-<h3>Historical Spends </h3>
+<p>Tag: {{ merchant.merchant_type.name }}</p>
+<h3>Historical Total Spent with Store and Tag</h3>
 <ul>
-    {% for amount in recent_amounts %}
-    <li>£{{ amount.value }}</li>
-    {% endfor %}
+
 </ul>
 </div>
+<p id="transaction-summary">£{{ recent_amounts|sum(attribute='value') }}</p>
 
 
 {% endblock %}
