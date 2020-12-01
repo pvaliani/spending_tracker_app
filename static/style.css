@@ -9,6 +9,7 @@
 }
 
 
+
 #logo {
 
     text-align: center;
@@ -58,6 +59,23 @@
 
 
 }
+
+.global-button {
+
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+}
+
+
+
+
 
 /* ----- HOME PAGE CSS ----------- */
 
@@ -115,7 +133,7 @@
 .current-budget {
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     padding-top: 0px;
@@ -137,7 +155,7 @@
 .budget-edit-view {
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
  
@@ -145,6 +163,15 @@
 
 }
 
+
+.edit-budget-link{
+
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+
+
+}
 /* ------ BUDGET VIEW CSS------------ */
 
 /* ----- MERCHANT TAGS CSS ------------- */
@@ -153,7 +180,7 @@
     font-family: Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0px;
 
 
 }
@@ -165,6 +192,7 @@
     font-weight: bold;
     text-align: center;
     padding-top: 100px;
+    padding-bottom: 0px;
 
 }
 
@@ -211,8 +239,15 @@
     font-size: 20px;
     text-align: center;
     padding-top: 20px;
+  
 
+}
 
+.tag-edit-hyperlink {
+
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
 }
 
 /* -------------MERCHANT TAGS CSS--------------- */
@@ -235,7 +270,7 @@
 .store-view {
 
     font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     padding-top: 20px;
 
@@ -312,7 +347,12 @@
 
 
 
+.merchant-edit-hyperlink {
 
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
 
 
 
@@ -397,7 +437,12 @@
 }
 
 
+.transactions-edit-hyperlink {
 
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
 
 
 

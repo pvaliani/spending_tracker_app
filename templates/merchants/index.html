@@ -8,11 +8,11 @@
 <section class="store-view">
     <h3>{{ merchant.name }}</h3>
     <p>{{ merchant.merchant_type.name }}</p>
-    <a href="/merchants/{{ merchant.id }}/edit">Edit</a>
+    <a href="/merchants/{{ merchant.id }}/edit" class="merchant-edit-hyperlink">Edit</a>
     <form action="/merchants/{{ merchant.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
-    </form>
-    <a href="/merchants/{{ merchant.id }}">Details</a>
+    <a href="/merchants/{{ merchant.id }}" class="merchant-edit-hyperlink">Details</a>
+    <input type="submit" value="Delete" class="global-button">
+</form>
 </section>
 
 {% endfor %}
