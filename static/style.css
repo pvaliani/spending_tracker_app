@@ -1,11 +1,37 @@
-/* #app-logo {
+#main-header {
 
     font-family: Helvetica, sans-serif;
 
+    
+
 }
 
-#main-background {
 
-    background-color: aquamarine;
+#logo {
 
-} */
+    text-align: center;
+    font-size: 50px;
+    
+
+}
+
+
+
+#pages-body {
+
+    
+  
+    
+}
+
+.menu {
+
+    list-style-type: none;
+  
+}
+
+.sub-menus {
+
+        list-style-type: none;
+      
+}

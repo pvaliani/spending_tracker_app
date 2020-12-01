@@ -7,48 +7,51 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Transactions App</title>
 </head>
-<body>
-    <header>
-        <h1>Budgie App / Budg-e App</h1>
+<body id="pages-body">
+    <header id="main-header">
+        <h1 id="logo">Budgie 🦜</h1>
+        <h3>Are you avian fun?</h3>
         <nav>
             <ul class="menu">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Fly Home</a></li>
                 <li>
-                    Merchants
-                    <ul>
-                        <li><a href="/merchants">View All Merchants</a></li>
-                        <li><a href="/merchants/new">Add New Merchant</a></li>
+                    <!-- Your Budgie -->
+                    <ul class="sub-menus">
+                        <li><a href="/userbudgets">View Budgie</a></li>
+                        <!-- <li><a href="/userbudgets/new">Add Budget</a></li> -->
                     </ul>
                 </li>
                 <li>
-                    Merchant Types (Tags)
-                    <ul>
-                        <li><a href="/merchanttypes">View All Merchant Types</a></li>
-                        <li><a href="/merchanttypes/new">Add New Merchant Type</a></li>
+                    <!-- Spending Tags -->
+                    <ul class="sub-menus">
+                        <li><a href="/merchanttypes">View Tags</a></li>
+                        <li><a href="/merchanttypes/new">Add A Tag</a></li>
                     </ul>
                 </li>
                 <li>
-                    Amounts
-                    <ul>
-                        <li><a href="/amounts">View All Recent Amounts</a></li>
-                        <li><a href="/amounts/new">Add New Amount</a></li>
+                    <!-- Stores -->
+                    <ul class="sub-menus">
+                        <li><a href="/merchants">View Stores</a></li>
+                        <li><a href="/merchants/new">Add New Stores</a></li>
                     </ul>
                 </li>
                 <li>
-                    Transactions
-                    <ul>
+                    <!-- Transactions -->
+                    <ul class="sub-menus">
                         <li><a href="/transactions">View All Transactions</a></li>
                         <li><a href="/transactions/new">Add Transaction</a></li>
                     </ul>
                 </li>
-                <!-- Extension added user budget navigation  -->
                 <li>
-                    User Budget
-                    <ul>
-                        <li><a href="/userbudgets">View Budget</a></li>
-                        <li><a href="/userbudgets/new">Add Budget</a></li>
+                    <!-- Amounts -->
+                    <ul class="sub-menus">
+                        <li><a href="/amounts">View Recent Seeds</a></li>
+                        <li><a href="/amounts/new">Add Seeds</a></li>
                     </ul>
                 </li>
+
+                <!-- Extension added user budget navigation  -->
+
                 
             </ul>
         </nav>
