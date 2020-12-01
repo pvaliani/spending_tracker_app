@@ -13,7 +13,7 @@ user_budgets_blueprint = Blueprint("user_budgets", __name__)
 # INDEX - returns a users budget and initialises as 0
 @user_budgets_blueprint.route("/userbudgets")
 def user_budgets():
-    user_budget = user_budget_repository.select_all()
+    user_budget = user_budget_repository.select()
     return render_template("user_budgets/index.html", new_user_budget=user_budget)
 
     #ADD BACK IF CODE BROKEN ------
@@ -47,12 +47,12 @@ def create_new_user_budget():
 # EDIT
 @user_budgets_blueprint.route("/userbudgets/edit")
 def edit_user_budget():
-    user_budget = user_budget_repository.select_all()
+    user_budget = user_budget_repository.select()
     return render_template('user_budgets/edit.html', user_budget=user_budget)
 
 
 # UPDATE
-@user_budgets_blueprint.route("/userbudgets/", methods=["POST"])
+@user_budgets_blueprint.route("/userbudgets/update", methods=["POST"])
 def update_user_budget():
     value = request.form["value"]
     user_budget = UserBudget(value)
@@ -70,8 +70,6 @@ def update_user_budget():
 
 
 
-
-# -------------------------------------- ALTERNATIVE CONTROLLERS FOR DATABASE OF BUDGET -------------
 
 
 

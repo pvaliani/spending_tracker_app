@@ -5,6 +5,8 @@ import repositories.amount_repository as amount_repository
 from models.merchant import Merchant
 import repositories.merchant_repository as merchant_repository
 
+
+
 def save(transaction):
     sql = "INSERT INTO transactions (amount_id, merchant_id) VALUES (%s, %s) RETURNING id"
     values = [transaction.amount.id, transaction.merchant.id]

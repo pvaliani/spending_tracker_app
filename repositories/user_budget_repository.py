@@ -16,14 +16,11 @@ def save(user_budget):
     user_budget.value = value
 
 
-def select_all():
-    user_budgets = []
-    sql = "SELECT * FROM user_budgets"
+def select():
+    sql = "SELECT * FROM user_budgets WHERE id = 1"
     results = run_sql(sql)
-    for result in results:
-        user_budget = UserBudget(result["value"])
-        user_budgets.append(user_budget)
-    return user_budgets
+    user_budget = UserBudget(results[0]["value"])
+    return user_budget
 
 
 # - SQL: delete all from the table. Execute SQL runner

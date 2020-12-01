@@ -57,3 +57,7 @@ CREATE TABLE transactions (
 -- psql -U user -d transactions -c 'SELECT SUM (value) FROM amounts'   - sums all amounts
 
 
+
+
+-- psql -U user -d transactions -c 'UPDATE user_budgets SET value = 2000 WHERE id = 1'
+
