@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Your Budgie 🦜</h2>
+<h2 id="budget-view-header">Your Budgie 🦜</h2>
 
 
-<section>
-    <h3>Currently: £{{ new_user_budget.value}}</h3>
+<section class="current-budget">
+    <h3>£{{ new_user_budget.value}}</h3>
     <a href="/userbudgets/edit">Feed</a>
     <!-- <form action="/user_budgets/delete" method="POST">
         <input type="submit" value="Delete"> -->

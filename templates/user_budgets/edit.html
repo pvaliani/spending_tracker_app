@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update 🦜</h2>
+<h2 id="budget-view-header">Update 🦜</h2>
 
 <!-- WORKING -->
 
 <form action="/userbudgets/update" method="POST">
-    <div>
-        <label for="value">New Budget Value:</label>
+    <div class="budget-edit-view">
+        <label for="value">£</label>
         <input type="number" id="value" name="value" value="{{ user_budget.value }}">
     </div>
-    <div>
+    <div class="budget-edit-view">
         <input type="submit">
     </div>
 </form>
