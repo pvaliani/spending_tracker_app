@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update a Merchant Type</h2>
+<h2 id="tag-edit-header">Update Tag</h2>
 
 <form action="/merchanttypes" method="POST">
-    <div>
-        <label for="name">Name:</label>
+    <div class="tag-edit">
+        <label for="name"></label>
         <input type="text" id="name" name="name" value="{{ merchant_type.name }}">
     </div>
-    <div>
+    <div class="tag-edit">
         <input type="submit">
     </div>
 </form>

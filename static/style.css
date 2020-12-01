@@ -28,6 +28,7 @@
     justify-content: center;
     position: absolute;
     top: 0;
+    left: 100px;
 
       
 }
@@ -143,6 +144,29 @@
 
 }
 
+
+#tag-edit-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+
+}
+
+
+.tag-edit {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+}
+
 /* -------------MERCHANT TAGS CSS--------------- */
 
 
@@ -193,6 +217,54 @@
 
 
 }
+
+
+#edit-store-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+
+.store-edit {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+
+
+
+}
+
+.store-show-details {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+#store-details-header {
+
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+
+
 
 
 
