@@ -13,9 +13,9 @@ transactions_blueprint = Blueprint("transactions", __name__)
 @transactions_blueprint.route("/transactions")
 def transactions():
     transactions = transaction_repository.select_all()
-    # possible breakthrough code
+   
     merchant_types = merchant_type_repository.select_all()
-    # locates the total sum from the db table and allows it to show in the view. Doesn't work properly though - DELETE
+
     total = amount_repository.sum()
     return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types, total=total)
 
@@ -31,15 +31,12 @@ def new_transaction():
 # CREATE
 @transactions_blueprint.route("/transactions", methods=["POST"])
 def create_transaction():
-    # take amount information form to create amount object - amount =  request.form["value"] - new_amount = Amount(value)
     amount_value = request.form["amount"]
     amount_obj = Amount(amount_value)
     amount_repository.save(amount_obj)
     merchant_id = request.form["merchant_id"]
-    # amount = amount_repository.select(amount)
     merchant = merchant_repository.select(merchant_id)
     new_transaction = Transaction(amount_obj, merchant)
-    # amount_repository.save(new_amount)
     transaction_repository.save(new_transaction)
     return redirect("/transactions")
 

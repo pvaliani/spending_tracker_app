@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 id="transactions-view-header">Transactions</h2>
+<h2 id="transactions-view-header">Transactions.</h2>
 
 
 <p id="transaction-summary">Total Spent: £{{ transactions|sum(attribute='amount.value') }}</p>
@@ -9,7 +9,7 @@
 {% for transaction in transactions %}
 
 <section class="transactions-view">
-    <!-- Transaction summary statement - could add further information here or place into a table -->
+    <!-- Transaction summary statement  -->
     <p>You spent £{{ transaction.amount.value }} at {{ transaction.merchant.name }} on {{ transaction.merchant.merchant_type.name }} 
 
         
@@ -29,7 +29,6 @@
 
 
 
-<!-- TEST PLACEHOLDER FOR TOTAL FROM SQL TABLE - DELETE WHEN A FUNCTION IS CREATED -->
 
 
 {% endblock %}

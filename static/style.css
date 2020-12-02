@@ -46,7 +46,7 @@
     font-family: Helvetica, sans-serif;
     text-decoration: none;
     display:inline-block;
-    margin-right: 40px;
+    margin-right: 85px;
 }
 
 .welcome-logo {
@@ -178,7 +178,8 @@
 .tag-main-view {
 
     font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
     padding-top: 0px;
 
@@ -368,7 +369,7 @@
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
 
 
 }
@@ -378,7 +379,8 @@
 .transactions-view {
 
     font-family: Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
     padding-top: 20px;
 
