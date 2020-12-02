@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 id="store-details-header">{{ merchant.name }}</h2>
+<h2 id="store-details-header">{{ merchant.name }} - {{ merchant.merchant_type.name }}</h2>
 
 <div class="store-show-details">
-<p>Tag: {{ merchant.merchant_type.name }}</p>
-<h3>Historical Total Spent with Store and Tag</h3>
+<h3>Total Spent with Store by Tag Category:</h3>
 <ul>
 
 </ul>
