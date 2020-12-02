@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 id="budget-view-header">Update 🦜</h2>
+<h2 id="budget-view-header">Update <img src={{ url_for('static', filename='logo-budgie.jpg') }} alt="budgie-logo" class="budgie-logo"></h2>
 
 <!-- WORKING -->
 
@@ -11,7 +11,7 @@
         <input type="number" id="value" name="value" value="{{ user_budget.value }}">
     </div>
     <div class="budget-edit-view">
-        <input type="submit">
+        <input type="submit" class="global-button">
     </div>
 </form>
 
