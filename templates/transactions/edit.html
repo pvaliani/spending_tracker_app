@@ -6,13 +6,7 @@
 <form action="/transactions/{{ transaction.id }}" method="POST">
     <div class="transactions-edit">
         <label for="amount">Amount:</label>
-        <select name="amount_id" id="amount">
-            {% for amount in amounts %}
-            <option value="{{ amount.id }}" {% if amount.id == transaction.amount.id %} selected {% endif %}>
-                {{ amount.value }}
-            </option>
-            {% endfor %}
-        </select>
+        <input type="number" name="amount" value="{{ transaction.amount.value }}" step=0.01>
     </div>
     <div class="transactions-edit">
         <label for="merchant">Merchant:</label>

@@ -13,7 +13,6 @@ def merchants():
     return render_template("merchants/index.html", merchants=merchants)
     
 
-# - ****CHANGE from VICTIMS lines 20-24***************
 
 # SHOW
 @merchants_blueprint.route("/merchants/<id>")

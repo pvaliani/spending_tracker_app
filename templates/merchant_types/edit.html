@@ -3,7 +3,7 @@
 
 <h2 id="tag-edit-header">Update Tag</h2>
 
-<form action="/merchanttypes" method="POST">
+<form action="/merchanttypes/{{ merchant_type.id }}" method="POST">
     <div class="tag-edit">
         <label for="name"></label>
         <input type="text" id="name" name="name" value="{{ merchant_type.name }}">

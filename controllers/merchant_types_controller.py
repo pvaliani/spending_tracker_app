@@ -40,6 +40,7 @@ def update_merchant(id):
     name = request.form["name"]
     merchant_type = MerchantType(name, id)
     merchant_type_repository.update(merchant_type)
+    return redirect("/merchanttypes")
 
 
 # DELETE
