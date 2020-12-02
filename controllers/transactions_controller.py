@@ -57,7 +57,6 @@ def update_transaction(id):
     amount_obj = Amount(amount_value)
     amount_repository.save(amount_obj)
     merchant_id = request.form["merchant_id"]
-    # amount = amount_repository.select(amount_id)
     merchant = merchant_repository.select(merchant_id)
     transaction = Transaction(amount_obj, merchant, id)
     transaction_repository.update(transaction)
