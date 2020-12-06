@@ -28,16 +28,16 @@ user_budget_repository.delete_all()
 
 # - Initial data which seeds to database
 
-amount_1 = Amount(33.40)
+amount_1 = Amount(50.50)
 amount_repository.save(amount_1)
 
-amount_2 = Amount(50.31)
+amount_2 = Amount(200.35)
 amount_repository.save(amount_2)
 
-amount_3 = Amount(100.50)
+amount_3 = Amount(55)
 amount_repository.save(amount_3)
 
-amount_4 = Amount(1500)
+amount_4 = Amount(150)
 amount_repository.save(amount_4)
 
 merchant_type_1 = MerchantType("Groceries")
@@ -52,8 +52,11 @@ merchant_type_repository.save(merchant_type_3)
 merchant_1 = Merchant("Amazon", merchant_type_2)
 merchant_repository.save(merchant_1)
 
-merchant_2 = Merchant("eBay", merchant_type_1)
+merchant_2 = Merchant("Sainsbury's", merchant_type_1)
 merchant_repository.save(merchant_2)
+
+merchant_3 = Merchant("Spotify", merchant_type_3)
+merchant_repository.save(merchant_3)
 
 transaction_1 = Transaction(amount_2, merchant_2)
 transaction_repository.save(transaction_1)
