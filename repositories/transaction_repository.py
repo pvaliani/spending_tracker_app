@@ -5,7 +5,7 @@ import repositories.amount_repository as amount_repository
 from models.merchant import Merchant
 import repositories.merchant_repository as merchant_repository
 
-
+# - Save a transaction
 
 def save(transaction):
     sql = "INSERT INTO transactions (amount_id, merchant_id) VALUES (%s, %s) RETURNING id"
@@ -14,6 +14,11 @@ def save(transaction):
     id = results[0]['id']
     transaction.id = id
 
+# - Set up an empty transactions list to store all transactions
+# - Select all from transactions in the PostGreSQL database
+# - Initiate SQL runnner
+# - For each iteration in the results list of dictionaries
+# - An amount is defined by the amount_id selected on each pass of the loop in results
 
 def select_all():
     transactions = []
