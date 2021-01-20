@@ -4,7 +4,9 @@
 <h2 id="transactions-view-header">Transactions.</h2>
 
 
-<p id="transaction-summary">Total Spent: £{{ transactions|sum(attribute='amount.value') }}</p>
+<p id="transaction-summary">Total Spent: £{{ transactions|sum(attribute='amount.value') }} {{total}}</p>
+
+<!-- 18/12/2020 EXTENSION work with total  return on line 7 -->
 
 {% for transaction in transactions %}
 

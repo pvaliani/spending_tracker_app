@@ -31,6 +31,8 @@ user_budget_repository.delete_all()
 amount_1 = Amount(50.50)
 amount_repository.save(amount_1)
 
+# ---- EXTENSION WORK 18/12/2020 ADDED/REMOVED AMOUNT_1 TO MAKE LESS CONFUSING AS WAS POPULATING THE DB NOT IN A TRANSACTION
+
 amount_2 = Amount(200.35)
 amount_repository.save(amount_2)
 
@@ -61,7 +63,7 @@ merchant_repository.save(merchant_3)
 transaction_1 = Transaction(amount_2, merchant_2)
 transaction_repository.save(transaction_1)
 
-transaction_2 = Transaction(amount_3, merchant_1)
+transaction_2 = Transaction(amount_1, merchant_1)
 transaction_repository.save(transaction_2)
 
 transaction_3 = Transaction(amount_3, merchant_2)

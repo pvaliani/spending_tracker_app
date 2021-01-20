@@ -40,7 +40,8 @@ CREATE TABLE merchants (
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
     merchant_id SERIAL REFERENCES merchants(id) ON DELETE CASCADE,
-    amount_id SERIAL REFERENCES amounts(id) ON DELETE CASCADE
+    amount_id SERIAL REFERENCES amounts(id) 
+    -- EXTENSION WORK 18/12/2020 REMOVED ON DELETE CASCADE 
 );
 
 -- delete amount_id and replace with the amount as an integer

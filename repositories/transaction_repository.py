@@ -57,3 +57,18 @@ def update(transaction):
     sql = "UPDATE transactions SET (amount_id, merchant_id) = (%s, %s) WHERE id = %s"
     values = [transaction.amount.id, transaction.merchant.id, transaction.id]
     run_sql(sql, values)
+
+
+# EXTENSION WORK 18/12/2020 ----------------------------------------
+
+def get_total_transactions():
+    total = 0
+    transactions = select_all()
+    for transaction in transactions:
+        total += transaction.amount.value
+    
+    return total
+
+    # Problem is the total is updated in view but when a transaction is deleted the total doesn't update
+    # As the amount in the amount table is not deleted -- FIXED
+    # now when i delete a transaction it will delete by the amount id whcih means any transactions of the same value will be removed - unwanted behaviour. changed from amount.id to amount.value in get total transactions - REMOVED ON DELETE CASCADE BUT AMMOUNT 2 IS STILL IN REPOSITORY

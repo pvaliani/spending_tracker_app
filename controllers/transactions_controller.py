@@ -17,7 +17,11 @@ def transactions():
     merchant_types = merchant_type_repository.select_all()
 
     total = amount_repository.sum()
-    return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types, total=total)
+    # EXTENSION WORK 18/12/2020 LINE 12 -------
+    get_total_transactions = transaction_repository.get_total_transactions()
+    # ---------------
+    return render_template("transactions/index.html", transactions=transactions, merchant_types=merchant_types, total=total, total_transactions = get_total_transactions)
+    # ------ 18/12/2020 EXTENSION WORK IN RENDER TEMPLATE GET TOTAL TRANSACTIONS -----
 
 
 # NEW
@@ -66,5 +70,8 @@ def update_transaction(id):
 # DELETE
 @transactions_blueprint.route("/transactions/<id>/delete", methods=["POST"])
 def delete_transaction(id):
+    transaction = transaction_repository.select(id)
     transaction_repository.delete(id)
+    # ----- EXTENSION WORK 18/12/2020 --- below on line 75 ---
+    amount_repository.delete(transaction.amount.id)
     return redirect("/transactions")
