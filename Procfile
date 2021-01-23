@@ -1,3 +1,1 @@
-
-
-web: gunicorn wsgi:app
+web: gunicorn <budgie-budget-tracker>.wsgi --log-file -
