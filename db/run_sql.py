@@ -1,4 +1,5 @@
 # - SQL Runner for the application
+# - Need to create runner for heroku db
 
 import psycopg2
 import psycopg2.extras
